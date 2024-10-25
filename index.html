@@ -6,61 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReTro Forum</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- TAILWIND CSS CONFIG -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary:"#797DFC",
+                        "base-300":"#fff",
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-gray-100 font-sans leading-normal tracking-normal container mx-auto">
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto p-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="./images/logo.png" alt="Logo" class="h-10" />
-                <!-- <h1 class="ml-2 text-2xl font-bold">ReTro</h1> -->
+<body class=" font-sans leading-normal tracking-normal container mx-auto">
+
+    <!-- Header Container -->
+    <header class="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-gray-800">
+            <span class="text-black">Re</span><span class="text-indigo-700">Tro</span>
+        </div>
+    
+        <!-- Icons and Sign In Button -->
+        <div class="flex items-center space-x-4">
+            <!-- Icons Container -->
+            <div class="flex items-center space-x-3">
+                <!-- Home Icon -->
+                <button class="p-2 rounded-full border bg-gray-50 hover:bg-gray-100 hover:border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+                    </svg>
+                </button>
+    
+                <!-- Pencil Icon -->
+                <button class="p-2 rounded-full border bg-gray-50 hover:bg-gray-100 hover:border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z" />
+                    </svg>
+                </button>
+    
+                <!-- User Icon -->
+                <button class="p-2 rounded-full border bg-gray-50 hover:bg-gray-100 hover:border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9 5-9 5-9-5 9-5z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 14l6.16-3.5a12 12 0 1 0-12.32 0L12 14z" />
+                    </svg>
+                </button>
+    
+                <!-- Flag Icon -->
+                <button class="p-2 rounded-full border bg-gray-50 hover:bg-gray-100 hover:border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18V3H3z" />
+                    </svg>
+                </button>
             </div>
-            <div class="flex space-x-4">
-                <button class="text-blue-600">Tooltip</button>
-                <button class="text-blue-600">Icons</button>
-                <button class="px-4 py-2 bg-blue-600 text-white rounded">Sign In</button>
-            </div>
+    
+            <!-- Sign In Button -->
+            <button class="px-4 py-2 text-white bg-primary rounded-full">
+                Sign In
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-purple-500 to-blue-600 text-white flex">
-        <div class="flex-1 container mx-auto p-8 text-center">
-            <h2 class="text-4xl font-bold">Welcome to the <span class="text-blue-300">ReTro</span> Forum</h2>
-            <p class="mt-4">Share your favorite opinion and win and wp forum coffee mug!</p>
-            <form class="mt-6">
-                <input type="text" placeholder="Search here anything" class="p-3 rounded w-2/3" />
-                <button class="px-6 py-3 bg-white text-blue-600 rounded ml-2">Search</button>
-            </form>
-        </div>
-        <div class="flex-1 mt-8 bg-white text-blue-600 rounded-lg inline-block p-4 shadow-md">
-            <p>Registered Users: 01 | Forum: 05 | Topics: 01 | Replies: 01</p>
-        </div>
-    </section>
+    <div class="grid grid-cols-2  place-content-center bg-cover bg-top object-bottom bg-[#12132D] mx-20 my-10 rounded-lg flex gap-4 h-96"
+        style="background-image: url('./images/bgbanner.png');">
+            <!-- Header Section -->
+            <div class="justify-self-center text-base-300 py-5 px-10 flex flex-col gap-3">
+                <h1 class="text-4xl font-bold  ">
+                    Welcome to the <span class="text-blue-500">Re</span><span class="text-purple-500">Tro</span> Forum
+                </h1>
+                <p class="text-sm text-gray-300">
+                    Share your favorite opinion and win and wp forum coffee mug!
+                </p>
+                <!-- Search Section -->
+                <div class="flex items-center bg-white rounded-full shadow-md p-1 max-w-md  mt-5">
+                    <input type="text" placeholder="Search here anything" class="w-full px-4 py-2 rounded-full focus:outline-none text-black" />
+                    <button class="bg-primary hover:bg-primary text-white px-6 py-2 rounded-full ml-2">
+                        Search
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Stats Section -->
+            <div class="justify-self-center p-6 bg-gray-100 rounded-lg shadow w-1/2">
+                <ul class="space-y-4 text-gray-800">
+                    <li class="flex justify-between">
+                        <span>Registered Users</span>
+                        <span>01</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Forum</span>
+                        <span>05</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Topics</span>
+                        <span>01</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Replies</span>
+                        <span>01</span>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+
 
     <!-- Let's Discuss Section -->
-    <section class="py-8 bg-gray-50">
-        <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-bold">Let's Discuss</h3>
-            <p class="text-gray-500 mt-2">Yes, you can run unit tests and view the results directly within the app.</p>
+    <section class="py-8 bg-gray-50 ">
+        <div class="max-w-md mx-auto text-center">
+            <h3 class="text-3xl font-bold text-[#12132D]">Let's Discuss</h3>
+            <p class="text-gray-500 mt-2 text-[#12132D]/60 text-sm">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a
+            streamlined .</p>
 
             <!-- Discussions Section -->
-            <section id="discussions-section" class="py-8">
-                <div class="container mx-auto text-center">
-                    <h3 class="text-3xl font-bold">Let's Discuss</h3>
-                    <div id="discussions" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-                    <div id="loading-discussions" class="hidden">Loading discussions...</div> <!-- Loading indicator -->
-                </div>
-            </section>
+            
         </div>
     </section>
 
-    <!-- Join Forum Call-to-Action Section -->
-    <section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center p-8">
-        <h3 class="text-3xl font-bold">Join Our Forum</h3>
-        <p class="mt-4">Share your favorite opinion and win a wp forum coffee mug!</p>
-        <button class="mt-6 px-8 py-3 bg-white text-blue-600 rounded">Registered Now</button>
+    <!-- Join Forum Section -->
+    <section  class="bg-[#12132D] text-white p-8 rounded-lg flex gap-3 items-center mx-20 justify-start gap-5">
+        <!-- LEFT -->
+        <div class="flex-grow flex flex-col items-start gap-5 pl-16 h-full">
+            <h3 class="text-3xl font-bold">Join Our Forum</h3>
+            <p class="text-sm text-gray-300">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+            <button class=" px-8 py-3 bg-white text-blue-600 rounded">Registered Now</button>
+        </div>
+        <!-- RIGHT -->
+         <div class="flex-none self-end ">
+            <img src="./images/joinforum.png" alt="" class="w-2/3">
+         </div>
     </section>
 
 <!-- Latest Posts Section -->
@@ -73,13 +162,20 @@
 </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <p class="mb-4">&copy; 2017 ReTro. All Rights Reserved.</p>
+    <footer class="bg-[#30325E]/10 text-white py-8 text-center h-80 flex flex-col items-center justify-center">
+       <div class="max-w-md space-y-3">
+        <h2 class="text-3xl text-[#12132D] font-bold">ReTro</h2>
+        <p class="text-gray-500 text-sm">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+            piece of classical Latin literature
+            from 45 BC</p>
         <div class="flex justify-center space-x-4">
             <a href="#">Twitter</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
         </div>
+        
+        <p class="text-gray-500 text-sm pt-5">&copy; 2017 ReTro. All Rights Reserved.</p>
+       </div>
     </footer>
 
     <!-- Link to your JavaScript file -->
